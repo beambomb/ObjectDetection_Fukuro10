@@ -30,14 +30,14 @@ while True:
             cy = int((y1 + y2) / 2)
 
             # Draw bounding box
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 0), 2)
 
             # Draw centroid
             cv2.circle(frame, (cx, cy), 5, (0, 0, 255), -1)
 
             # Text label + centroid coords
             cv2.putText(frame, f"{label} ({cx}, {cy})", (x1, y1 - 8),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
 
     cv2.imshow("YOLOv8 Webcam + Centroid", frame)
 
